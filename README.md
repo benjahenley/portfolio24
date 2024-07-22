@@ -1,4 +1,4 @@
-# Welcome to My GitHub Profile! 👋
+# Welcome to My Personal Portfolio! 👋
 
 I'm **Benjamin**, a passionate Full Stack Developer with a knack for creating innovative and efficient solutions. Here, you'll find a showcase of my projects and contributions to the tech community.
 
