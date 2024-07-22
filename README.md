@@ -28,7 +28,7 @@ Contributed to the Gold, Silver, and Copper page by:
 - Optimizing the UI for a seamless user experience
 - Enhancing user engagement and satisfaction
 
-### [🍽️ Tuki]
+### 🍽️ Tuki
 An ambitious web app designed with React Native for food delivery:
 - Special boxes with random items chosen by stores
 - Enhanced user interaction and ordering process
