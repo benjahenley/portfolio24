@@ -16,37 +16,37 @@ I'm **Benjamin**, a passionate Full Stack Developer with a knack for creating in
 
 ## 🌟 Featured Projects
 
-### [🌎 Buenos Aires Vision](https://example.com)
+### [🌎 Buenos Aires Vision](https://www.buenosairesvision.tur.ar/)
 A stunning tourism page offering the best tours in Buenos Aires. My role involved:
 - Designing an elegant UI
 - Attracting clients and increasing revenue
 - Showcasing tours to ensure a memorable experience
 
-### [🔗 Panorama Minero](https://example.com)
+### [🔗 Gold, Silver & Copper](https://oroplataycobre.com.ar/)
 Contributed to the Gold, Silver, and Copper page by:
 - Internationalizing the page (English and Spanish)
 - Optimizing the UI for a seamless user experience
 - Enhancing user engagement and satisfaction
 
-### [🍽️ Tuki](https://example.com)
+### [🍽️ Tuki]
 An ambitious web app designed with React Native for food delivery:
 - Special boxes with random items chosen by stores
 - Enhanced user interaction and ordering process
 
-### [🌊 Ibijetrent](https://example.com)
+### [🌊 Ibijetrent](https://www.ibijetrent.com/)
 Discover the beauty of Ibiza with jetski rentals:
 - Designed a powerful algorithm to check availability
 - Robust backend using Firebase for easy rentals
 
 ## 📄 Documentation
 
-### [📘 E-commerce Backend with Postman Docs](https://example.com)
+### [📘 E-commerce Backend with Postman Docs](https://github.com/benjahenley/dwf-m9-desafio-final)
 A comprehensive backend system for e-commerce with detailed Postman documentation for API testing and integration.
 
 ## 📫 Get in Touch
 
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **LinkedIn**: [Benja Henley](https://www.linkedin.com/in/benjamin-h-579b88146/)
+- **Email**: [benjahenley@hotmail.com](mailto:benjahenley@hotmail.com)
 
 ---
 
