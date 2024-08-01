@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to My Personal Portfolio! 👋
 
-## Getting Started
+I'm **Benjamin**, a passionate Full Stack Developer with a knack for creating innovative and efficient solutions. Here, you'll find a showcase of my projects and contributions to the tech community.
 
-First, run the development server:
+## 🚀 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🌟 **Ambitious Projects**: Continuously pushing boundaries with ambitious projects.
+- 🌐 **Internationalization**: Expert in creating multilingual web applications.
+- 💡 **Innovative Solutions**: Developing algorithms and robust backends to enhance user experiences.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Skills
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Backend**: Node.js, Firebase, Prisma
+- **Tools**: Postman, Git, Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🌟 Featured Projects
 
-## Learn More
+### [🌎 Buenos Aires Vision](https://www.buenosairesvision.tur.ar/)
+A stunning tourism page offering the best tours in Buenos Aires. My role involved:
+- Designing an elegant UI
+- Attracting clients and increasing revenue
+- Showcasing tours to ensure a memorable experience
 
-To learn more about Next.js, take a look at the following resources:
+### [🔗 Gold, Silver & Copper](https://oroplataycobre.com.ar/)
+Contributed to the Gold, Silver, and Copper page by:
+- Internationalizing the page (English and Spanish)
+- Optimizing the UI for a seamless user experience
+- Enhancing user engagement and satisfaction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🍽️ Tuki
+An ambitious web app designed with React Native for food delivery:
+- Special boxes with random items chosen by stores
+- Enhanced user interaction and ordering process
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### [🌊 Ibijetrent](https://www.ibijetrent.com/)
+Discover the beauty of Ibiza with jetski rentals:
+- Designed a powerful algorithm to check availability
+- Robust backend using Firebase for easy rentals
 
-## Deploy on Vercel
+## 📄 Documentation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### [📘 E-commerce Backend with Postman Docs](https://github.com/benjahenley/dwf-m9-desafio-final)
+A comprehensive backend system for e-commerce with detailed Postman documentation for API testing and integration.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📫 Get in Touch
+
+- **LinkedIn**: [Benja Henley](https://www.linkedin.com/in/benjamin-h-579b88146/)
+- **Email**: [benjahenley@hotmail.com](mailto:benjahenley@hotmail.com)
+
+---
+
+Thanks for visiting my GitHub profile! Feel free to explore my projects and reach out if you'd like to collaborate.
+
