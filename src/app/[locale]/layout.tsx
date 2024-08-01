@@ -1,14 +1,14 @@
 import "./globals.css";
+import "photoswipe/style.css";
+
 import type { Metadata } from "next";
-import { Footer } from "../../presentation/components/footer";
 import { Source_Sans_3 } from "@next/font/google";
-import { ThemeProvider } from "../../presentation/components/ui/ThemeProvider";
-import { NavBarComp } from "@/presentation/components/ui/navbar/NavBar";
-import { Locales } from "@/interfaces";
+import { ThemeProvider } from "../../presentation/components/theme-providers/darkMode";
+import { Locales } from "@/infraestructure/interfaces";
 import { locales } from "@/middleware";
 
 const sourceSansPro = Source_Sans_3({
-  weight: ["200", "300", "400", "700", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
   subsets: ["latin"],
 });
@@ -34,10 +34,13 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <ThemeProvider>
-        <body className={sourceSansPro.className}>
-          <NavBarComp locale={locale}></NavBarComp>
-          <div className="mt-16">{children}</div>
-          <Footer></Footer>
+        <body
+          className={
+            sourceSansPro.className +
+            " bg-white dark:bg-slate-800 h-full min-h-screen"
+          }>
+          <script src="https://unpkg.com/wavesurfer.js"></script>
+          <div className="h-full min-h-screen">{children}</div>
         </body>
       </ThemeProvider>
     </html>

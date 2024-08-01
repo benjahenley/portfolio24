@@ -1,0 +1,88 @@
+{
+  "pages": {
+    "home": {
+      "bio": {
+        "title": "Junior Web Developer",
+        "subtitle": "I aspire to create beautiful things through code and design. With a growing portfolio of successful projects, my journey has just begun. I am eager to bring my skills and passion to a collaborative team, where I can contribute, learn, and grow alongside other talented professionals.",
+        "followButton": "Follow",
+        "followButtonClicked": "Following"
+      },
+      "about": {
+        "title": "Let's talk about me...",
+        "texts": [
+          "I'm Benja, a programmer based in Buenos Aires, Argentina. My journey in programming began in May 2021 when I started a course at APX School, an interactive platform that allows students to progress at their own pace.",
+          "Before that, I was already interested in coding and learned Python through YouTube tutorials by Mosh Hamedi.",
+          "I'm a fast learner with a keen eye for detail. I'm always eager to make new connections, take on new challenges, and deliver my best work.",
+          "I love learning new stuff, i am currently on my way to develop my first native app. Which will be quite a challenge. I am studying at Udemy, completed a next 14 course as well as underway to complete my native course.",
+          "Aside from programming, I'm passionate about electronic music, especially techno. I've been a DJ and producer since high school. Check out my music on Spotify"
+        ],
+        "link": "here"
+      },
+      "feed": {
+        "tweets": [
+          "Hello there! My name is Benjamin Henley Saubidet, and welcome to my developer page. I'm a full-stack JavaScript developer with 3 years of experience in full-stack, backend, and frontend development. I am deeply passionate about my craft and always strive for excellence in my work Currently, I am expanding my skills by studying React Native for mobile app development.",
+          "I have been a freelance developer for 3 years, and I am currently seeking an opportunity to join a dynamic development team that values Agile methodologies.",
+          [
+            "📚 EDUCATION 📚",
+            "School: St. Matthews College (2006-2018) ",
+            " School: University of Buenos Aires (Biochemistry) (2018-2020) ",
+            " Terciary: APX School (2021-2023) ",
+            " Terciary: Udemy - Next.js: The React framework for production (03/2024 - 06/2024) ",
+            " Terciary: Udemy - React Native: Native applications for IOS and Android (06/2024 - now) "
+          ],
+          "If you would like to get in contact with me, please fill out the form below!"
+        ]
+      },
+      "projects": {
+        "tweets": [
+          "Check out my e-commerce backend, complete with comprehensive Postman documentation.",
+          "Looking to have fun in Ibiza? I recommend renting a jetski to explore the beautiful sights this island has to offer. I designed a powerful algorithm that checks the availability of both guides and jetskis, along with a robust backend using Firebase. This ensures you can easily rent a jetski and enjoy a smooth experience.",
+          "I've had a great experience working with Panorama Minero, a company at the forefront of the mining industry. They have been pleased to work with me on multiple occasions. This time, I improved the UI by internationalizing the page, making it accessible in both English and Spanish. Additionally, I collaborated with a design team to add newsections to the page.",
+          "International Women in Mining (IWiM) is an international organization run by volunteers committed to the advancement of women in the mining sector. I was happy to develop this page dedicated to the inclusion and visibility of the female workforce.",
+          "I had the privilege of contributing to the creation of Panorama Minero's Gold, Silver, and Copper page. This project involved extensive collaboration to develop a comprehensive and visually appealing resource for users interested in these key mining sectors. I internationalized the page, making it accessible in both English and Spanish, which broadened its reach to a wider audience. Additionally, I optimized the user interface to ensure a seamless and engaging experience, integrating intuitive navigation and interactive elements. My work improved the page's usability and accessibility, adding significant value to Panorama Minero by attracting a more diverse and global audience.",
+          "My first solo project was a great success. I designed a web page for Buenos Aires Vision, a tourism company known for providing the best selection of tours in Buenos Aires. Their offerings range from exquisite dining experiences to river explorations, ensuring a memorable stay for visitors. My role involved showcasing these tours in an elegant and appealing manner, which effectively attracted clients and increased the company's revenue.",
+          "My most ambitious project yet is designing a web app with React Native. Tuki will be used to get food from different places. These places offer special boxes with random items chosen by the store."
+        ]
+      }
+    }
+  },
+  "ui": {
+    "leftbar": {
+      "items": [
+        "Profile",
+        "LinkedIn",
+        "Github",
+        "Instagram",
+        "Music",
+        "Language"
+      ],
+      "languages": {
+        "en": "English (UK)",
+        "es": "Spanish (ES)"
+      }
+    },
+    "rightbar": {
+      "trends": {
+        "title": "What's Happening",
+        "list": [
+          { "title": "Apple's IOS 18.1", "category": "Technology - Trending" },
+          { "title": "#OpenAI's new voice", "category": "AI - Trending" },
+          { "title": "AWS's AI Strategy", "category": "AI - Trending" },
+          { "title": "Razer Blackshark V2", "category": "Equipment in USA" },
+          { "title": "#React_19", "category": "Technology - Trending" },
+          { "title": "Meta's New AI Tools", "category": "AI - Trending" }
+        ],
+        "posts": "posts",
+        "more": "Show More"
+      }
+    },
+    "optionsMenu": {
+      "options": [
+        { "option": "Feed", "id": "feed" },
+        { "option": "About", "id": "about" },
+        { "option": "Projects", "id": "projects" },
+        { "option": "Skillset", "id": "skills" }
+      ]
+    }
+  }
+}

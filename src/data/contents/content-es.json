@@ -1,0 +1,94 @@
+{
+  "pages": {
+    "home": {
+      "bio": {
+        "title": "Desarrollador Web Junior",
+        "subtitle": "Aspiro a crear cosas hermosas a través del código y el diseño. Con una cartera de proyectos exitosos en crecimiento, mi viaje apenas ha comenzado. Estoy ansioso por aportar mis habilidades y pasión a un equipo colaborativo, donde pueda contribuir, aprender y crecer junto a otros profesionales talentosos.",
+        "followButton": "Seguir",
+        "followButtonClicked": "Siguiendo"
+      },
+      "about": {
+        "title": "Hablemos sobre mí...",
+        "texts": [
+          "Soy Benja, un programador de Buenos Aires, Argentina. Mi viaje en la programación comenzó en mayo de 2021 cuando comencé un curso en APX School, una plataforma interactiva que permite a los estudiantes progresar a su propio ritmo.",
+          "Antes de eso, ya estaba interesado en la programación y aprendí Python a través de tutoriales en YouTube de Mosh Hamedi.",
+          "Aprendo rápido y tengo un buen ojo para los detalles. Siempre estoy ansioso por hacer nuevas conexiones, enfrentar nuevos desafíos y entregar mi mejor trabajo.",
+          "Me encanta aprender cosas nuevas, actualmente estoy en camino de desarrollar mi primera aplicación nativa. Lo cual será todo un desafío. Estoy estudiando en Udemy, completé un curso de Next 14 y estoy en proceso de completar mi curso nativo.",
+          "Además de programar, me apasiona la música electrónica, especialmente el techno. He sido DJ y productor desde la escuela secundaria. Mira mi música en Spotify"
+        ],
+        "link": "aquí"
+      },
+      "feed": {
+        "tweets": [
+          "¡Hola! Mi nombre es Benjamin Henley Saubidet, y bienvenido a mi página de developer. Soy un desarrollador full-stack de JavaScript con 3 años de experiencia en desarrollo full-stack, backend y frontend. Estoy profundamente apasionado por mi oficio y siempre me esfuerzo por la excelencia en mi trabajo. Actualmente, estoy ampliando mis habilidades estudiando React Native para el desarrollo de aplicaciones móviles.",
+          "He sido desarrollador freelance durante 3 años y actualmente estoy buscando una oportunidad para unirme a un equipo de desarrollo dinámico que valore las metodologías ágiles.",
+          [
+            "📚 EDUCACIÓN 📚",
+            "Escuela: St. Matthews College (2006-2018) ",
+            "Universidad: Universidad de Buenos Aires (Bioquímica) (2018-2020) ",
+            "Terciario: APX School (2021-2023) ",
+            "Terciario: Udemy - Next.js: El marco de trabajo React para producción (03/2024 - 06/2024) ",
+            "Terciario: Udemy - React Native: Aplicaciones nativas para IOS y Android (06/2024 - ahora) "
+          ],
+          "¡Si deseas ponerte en contacto conmigo, por favor completa el formulario a continuación!"
+        ]
+      },
+      "projects": {
+        "tweets": [
+          "Consulta mi backend de comercio electrónico, completo con documentación integral de Postman.",
+          "¿Quieres divertirte en Ibiza? Te recomiendo alquilar una moto de agua para explorar los hermosos paisajes que esta isla tiene para ofrecer. Diseñé un potente algoritmo que verifica la disponibilidad tanto de guías como de motos de agua, junto con un backend robusto usando Firebase. Esto asegura que puedas alquilar una moto de agua y disfrutar de una experiencia sin problemas.",
+          "He tenido una gran experiencia trabajando con Panorama Minero, una empresa a la vanguardia de la industria minera. Ellos han estado contentos de trabajar conmigo en múltiples ocasiones. Esta vez, mejoré la interfaz de usuario internacionalizando la página, haciéndola accesible tanto en inglés como en español. Además, colaboré con un equipo de diseño para agregar nuevas secciones a la página.",
+          "International Women in Mining (IWiM) es una organización internacional dirigida por voluntarios comprometidos con el avance de las mujeres en el sector minero. Me alegró desarrollar esta página dedicada a la inclusión y visibilidad de la fuerza laboral femenina.",
+          "Tuve el privilegio de contribuir a la creación de la página de Oro, Plata y Cobre de Panorama Minero. Este proyecto involucró una amplia colaboración para desarrollar un recurso integral y visualmente atractivo para los usuarios interesados en estos sectores clave de la minería. Internacionalicé la página, haciéndola accesible tanto en inglés como en español, lo que amplió su alcance a una audiencia más amplia. Además, optimicé la interfaz de usuario para asegurar una experiencia fluida e interactiva, integrando elementos de navegación intuitivos. Mi trabajo mejoró la usabilidad y accesibilidad de la página, agregando un valor significativo a Panorama Minero al atraer una audiencia más diversa y global.",
+          "Mi primer proyecto en solitario fue un gran éxito. Diseñé una página web para Buenos Aires Vision, una empresa de turismo conocida por ofrecer la mejor selección de tours en Buenos Aires. Sus ofertas van desde experiencias gastronómicas exquisitas hasta exploraciones fluviales, asegurando una estancia memorable para los visitantes. Mi papel implicó mostrar estos tours de manera elegante y atractiva, lo que efectivamente atrajo clientes e incrementó los ingresos de la empresa.",
+          "Mi proyecto más ambicioso hasta ahora es diseñar una aplicación web con React Native. Tuki se usará para obtener comida de diferentes lugares. Estos lugares ofrecen cajas especiales con artículos aleatorios elegidos por la tienda."
+        ]
+      }
+    }
+  },
+  "ui": {
+    "leftbar": {
+      "items": [
+        "Perfil",
+        "LinkedIn",
+        "Github",
+        "Instagram",
+        "Musica",
+        "Idioma"
+      ],
+      "languages": {
+        "en": "Inglés (UK)",
+        "es": "Español (ES)"
+      }
+    },
+    "rightbar": {
+      "trends": {
+        "title": "Qué está pasando",
+        "list": [
+          {
+            "title": "IOS 18.1 de Apple",
+            "category": "Tecnología - Tendencias"
+          },
+          { "title": "#Nueva voz de OpenAI", "category": "IA - Tendencias" },
+          { "title": "Estrategia de IA de AWS", "category": "IA - Tendencias" },
+          { "title": "Razer Blackshark V2", "category": "Equipos en EE.UU." },
+          { "title": "#React_19", "category": "Tecnología - Tendencias" },
+          {
+            "title": "Nuevas herramientas de IA de Meta",
+            "category": "IA - Tendencias"
+          }
+        ],
+        "posts": "publicaciones",
+        "more": "Mostrar más"
+      }
+    },
+    "optionsMenu": {
+      "options": [
+        { "option": "Feed", "id": "feed" },
+        { "option": "Sobre Mí", "id": "about" },
+        { "option": "Proyectos", "id": "projects" },
+        { "option": "Habilidades", "id": "skills" }
+      ]
+    }
+  }
+}
