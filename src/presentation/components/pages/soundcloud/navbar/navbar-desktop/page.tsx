@@ -34,9 +34,10 @@ export const NavBarSC: FC<Props> = ({ className }) => {
             {/* <FaSoundcloud className="text-6xl"></FaSoundcloud> */}
           </div>
           <ul className="flex flex-row h-full items-center">
-            {Navitems.map(({ name, href }) => {
+            {Navitems.map(({ name, href }, key) => {
               return (
                 <ScButtonOne
+                  key={key}
                   border
                   name={name}
                   href={href}

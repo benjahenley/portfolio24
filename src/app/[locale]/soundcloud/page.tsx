@@ -1,60 +1,62 @@
 "use client";
 
 import Image from "next/image";
-
 import { MiniNavSoundCloud } from "@/presentation/components/pages/soundcloud/mininavbar/page";
-import { NavBarSC } from "@/presentation/components/pages/soundcloud/navbar/navbar-desktop/page";
-import { FollowCountSC } from "@/presentation/components/pages/soundcloud/ui/follow-count/page";
 import { MusicCard } from "@/presentation/components/pages/soundcloud/ui/musicCard/page";
-import { NavbarMobileSC } from "@/presentation/components/pages/soundcloud/navbar/navbar-mobile/page";
 import { RightBarSC } from "@/presentation/components/pages/soundcloud/rightbar/page";
+import AudioPlayer from "@/presentation/components/pages/soundcloud/ui/audio-player/page";
+import { Locales } from "@/infraestructure/interfaces";
 
 const TRACKS = [
   {
     artwork: "/photos/tracks/make-you-forget.jpg",
-    audioFile: "/music/make-you-forget.wav",
+    audioFile: "/music/make-you-forget.mp3",
     title: "Make You Forget",
     date: "9 months ago",
     hashtag: "#Electronic",
   },
   {
     artwork: "/photos/tracks/high-stakes.jpg",
-    audioFile: "/music/high-stakes.wav",
+    audioFile: "/music/high-stakes.mp3",
     title: "High Stakes",
     date: "1 month ago",
     hashtag: "#Techno",
   },
   {
     artwork: "/photos/tracks/king-status.jpg",
-    audioFile: "/music/king-status.wav",
+    audioFile: "/music/king-status.mp3",
     title: "King Status",
     date: "12 months ago",
     hashtag: "#Techno",
   },
   {
     artwork: "/photos/tracks/anomaly.jpg",
-    audioFile: "/music/anomaly.wav",
+    audioFile: "/music/anomaly.mp3",
     title: "Anomaly",
     date: "1 year ago",
     hashtag: "#Techno",
   },
   {
     artwork: "/photos/tracks/alternative-ending.jpg",
-    audioFile: "/music/alternative.jpg",
+    audioFile: "/music/alternative-ending.mp3",
     title: "Alternative Ending",
     date: "1 year ago",
     hashtag: "#Techno",
   },
   {
     artwork: "/photos/tracks/injection.jpeg",
-    audioFile: "/music/injection.wav",
+    audioFile: "/music/injection.mp3",
     title: "Injection",
     date: "1 year ago",
     hashtag: "#Techno",
   },
 ];
 
-export default function SoundCloud() {
+export default function SoundCloud({
+  params: { locale },
+}: Readonly<{
+  params: { locale: Locales };
+}>) {
   return (
     <header className="bg-white dark:bg-[#1f2937] dark:text-white w-full relative mx-auto h-full">
       <div className="relative mx-auto">
@@ -85,19 +87,19 @@ export default function SoundCloud() {
             </div>
           </div>
         </div>
-        <MiniNavSoundCloud></MiniNavSoundCloud>
+        <MiniNavSoundCloud locale={locale}></MiniNavSoundCloud>
         <div className="lg:hidden">
-          <RightBarSC></RightBarSC>
+          <RightBarSC locale={locale}></RightBarSC>
         </div>
 
         {/* TRACKS */}
-
         <div className=" w-full p-4 flex flex-col gap-5">
           {TRACKS.map((track) => {
             return <MusicCard {...track}></MusicCard>;
           })}
         </div>
       </div>
+      <AudioPlayer></AudioPlayer>
     </header>
   );
 }

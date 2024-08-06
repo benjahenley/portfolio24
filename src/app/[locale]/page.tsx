@@ -17,14 +17,16 @@ import { NavbarMobile } from "@/presentation/components/ui/navbar-mobile/page";
 import { MdVerified } from "react-icons/md";
 import { contents } from "@/data/contents/content";
 import { OptionsMenu } from "@/presentation/components/ui/options-menu/page";
+import { useAtom } from "jotai";
+import { feedOptions } from "@/atoms/feed";
 
 export default function Home({
   params: { locale },
 }: Readonly<{
   params: { locale: Locales };
 }>) {
-  const [section, setSection] = useState("feed");
-  console.log(locale);
+  const [section, setSection] = useAtom(feedOptions);
+  const { home } = contents[locale].pages;
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-white dark:bg-[#1f2937] overflow-hidden">
@@ -59,12 +61,8 @@ export default function Home({
                     </a>
                   </p>
                 </div>
-                <h4 className="text-lg font-semibold">
-                  {contents[locale].pages.home.bio.title}
-                </h4>
-                <p className="mb-4">
-                  {contents[locale].pages.home.bio.subtitle}
-                </p>
+                <h4 className="text-lg font-semibold">{home.bio.title}</h4>
+                <p className="mb-4">{home.bio.subtitle}</p>
               </div>
               <div className="flex flex-wrap gap-4 pl-4 ">
                 <div className="flex items-center gap-1">
@@ -111,7 +109,10 @@ export default function Home({
                 />
               )}
               {section === "skills" && (
-                <Skillset className="p-4 bg-white dark:bg-[#1f2937] dark:text-white" />
+                <Skillset
+                  locale={locale}
+                  className="p-4 bg-white dark:bg-[#1f2937] dark:text-white"
+                />
               )}
             </div>
           </section>
@@ -119,7 +120,7 @@ export default function Home({
           <NavbarMobile locale={locale}></NavbarMobile>
         </main>
         <aside className="relative hidden p-2 pl-5 lg:block lg:w-[30%] xl:w-1/5 bg-white dark:bg-[#1f2937]">
-          <RightBar></RightBar>
+          <RightBar locale={locale}></RightBar>
         </aside>
       </div>
     </div>

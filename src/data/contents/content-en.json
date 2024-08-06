@@ -3,7 +3,7 @@
     "home": {
       "bio": {
         "title": "Junior Web Developer",
-        "subtitle": "I aspire to create beautiful things through code and design. With a growing portfolio of successful projects, my journey has just begun. I am eager to bring my skills and passion to a collaborative team, where I can contribute, learn, and grow alongside other talented professionals.",
+        "subtitle": "My goal is to create aesthetically pleasing and functional solutions through code and design. With a growing portfolio of successful projects, I am committed to continuously advancing my skills and knowledge. I am eager to bring my expertise and passion to a collaborative team, where I can contribute effectively, learn from others, and grow alongside talented professionals.",
         "followButton": "Follow",
         "followButtonClicked": "Following"
       },
@@ -43,10 +43,38 @@
           "My first solo project was a great success. I designed a web page for Buenos Aires Vision, a tourism company known for providing the best selection of tours in Buenos Aires. Their offerings range from exquisite dining experiences to river explorations, ensuring a memorable stay for visitors. My role involved showcasing these tours in an elegant and appealing manner, which effectively attracted clients and increased the company's revenue.",
           "My most ambitious project yet is designing a web app with React Native. Tuki will be used to get food from different places. These places offer special boxes with random items chosen by the store."
         ]
+      },
+      "skillset": {
+        "title": "My Skillset",
+        "texts": [
+          "I am proficient in JavaScript and TypeScript, with a strong knowledge of both SQL and NoSQL databases including Firebase Cloud Firestore, Firebase Realtime Database, and PostgreSQL. I enjoy working on React-based projects with Next.js and have experience deploying applications on Heroku and Vercel. From initial layout and architecture to a fully functional web app, I can handle the entire development process. Additionally, I am bilingual, fluent in both English and Spanish, which enhances my ability to collaborate in diverse teams.",
+          "During my time at Panorama Minero, I worked closely with other dedicated professionals, collaborating on projects aimed at enhancing the user interface and internationalizing web pages. Together, we implemented new sections and optimized accessibility in both English and Spanish, significantly expanding the platform's reach and audience. This enriching experience not only improved my technical skills but also strengthened my ability to work in a collaborative and dynamic environment.",
+          "At ibijetrent, I worked closely with a frontend developer, enhancing my teamwork skills. We collaborated on integrating complex functionalities, ensuring constant and effective communication to align our goals and solve problems in real-time. This project allowed me to apply my technical knowledge in JavaScript, TypeScript, React, and Next.js, while also improving my ability to coordinate and collaborate with other professionals, thus enhancing the quality of the final product and optimizing user experience. Through regular meetings, idea exchanges, and continuous feedback, we managed to develop a robust and efficient application that met the requirements and expectations of our users.",
+          "I have extensive experience with Postman, which has equipped me with the skills to build robust backends with CRUD operations. Check out the Projects tab to see my apps along with their respective documentation. My expertise extends to setting up and maintaining RESTful APIs, ensuring secure and efficient data exchange between the frontend and backend.",
+          "Moreover, I am adept at using powerful tools like Airtable and Algolia to enhance the functionality and user experience of my applications. I am also familiar with deploying applications on GitHub Pages, Vercel, and Heroku. Unfortunately, Heroku's recent removal of free dynos has left many of my applications without a host. Despite this, I have continued to explore alternative hosting solutions to ensure the accessibility and reliability of my projects."
+        ]
       }
+    },
+    "soundcloud": {
+      "options": {
+        "list": ["All, Popular Tracks, Tracks, Playlists"]
+      },
+      "followButton": "Follow",
+      "followButtonClicked": "Following",
+      "stationButton": "Station"
     }
   },
   "ui": {
+    "soundcloud": {
+      "rightbar": {
+        "texts": [
+          "Benjamin Henley Saubidet, born in Buenos Aires, Argentina in the year 2000, is a techno DJ & producer. His passion for electronic music blossomed after finishing school and entering the real world, where he got a job and started investing in what would soon become his future.",
+          "His career as a producer began with his first release, thanks to local DJ and now Drumcode artist Nicolas Taboada, who selected him for DJ Mag's first techno compilation.",
+          "His sound is characterized by dancy, yet sometimes melancholic melodies. He's a big fan of sound design and all of his tracks possess an array of original stabs, growls, and FX that make his sound unique.",
+          "He is currently signed on IAMT Red, Invicta, Nova Collective, Redlof, Kaligo, Reload Black, DJ Mag LA, Infekted, Made in Brussels, Spacekraft, & Future Techno."
+        ]
+      }
+    },
     "leftbar": {
       "items": [
         "Profile",
@@ -83,6 +111,86 @@
         { "option": "Projects", "id": "projects" },
         { "option": "Skillset", "id": "skills" }
       ]
+    },
+    "twitter": {
+      "trends": {
+        "posts": "posts",
+        "title": "What's Happening",
+        "list": [
+          {
+            "title": "Apple's IOS 18.1",
+            "tag": "Technology - Trending",
+            "posts": "302k",
+            "url": "https://www.theverge.com/2024/7/29/24208732/apple-intelligence-ai-ios-18-1-developer-beta-launch-iphone"
+          },
+          {
+            "title": "#OpenAI's new voice",
+            "tag": "AI - Trending",
+            "posts": "453k",
+            "url": "https://techcrunch.com/2024/07/30/openai-releases-chatgpts-super-realistic-voice-feature/"
+          },
+          {
+            "title": "AWS's AI Strategy",
+            "tag": "AI - Trending",
+            "posts": "216k",
+            "url": "https://www.cnbc.com/video/2024/07/01/aws-ceo-matt-garman-breaks-down-the-companys-ai-strategy.html?&qsearchterm=aws"
+          },
+          {
+            "title": "Razer Blackshark V2",
+            "tag": "Equipment in USA",
+            "posts": "339k",
+            "url": "https://www.zdnet.com/home-and-office/home-entertainment/razer-blackshark-v2-pro-review/"
+          },
+          {
+            "title": "#React_19",
+            "tag": "Technology - Trending",
+            "posts": "127k",
+            "url": "https://react.dev/blog/2024/04/25/react-19-upgrade-guide"
+          },
+          {
+            "title": "Meta's New AI Tools",
+            "tag": "AI - Trending",
+            "posts": "400k",
+            "url": "https://www.engadget.com/metas-next-hardware-project-might-be-ai-infused-headphones-with-cameras-204741102.html"
+          }
+        ],
+        "more": "Show More"
+      },
+      "people": {
+        "title": "Relevant people",
+        "list": [
+          {
+            "name": "Elon Musk",
+            "at": "@elonmusk",
+            "url": "https://twitter.com/elonmusk"
+          },
+          {
+            "name": "Sundar Pichai",
+            "at": "@sundarpichai",
+            "url": "https://twitter.com/sundarpichai"
+          },
+          {
+            "name": "Tim Cook",
+            "at": "@tim_cook",
+            "url": "https://twitter.com/tim_cook"
+          },
+          {
+            "name": "Satya Nadella",
+            "at": "@satyanadella",
+            "url": "https://twitter.com/satyanadella"
+          },
+          {
+            "name": "Susan Wojcicki",
+            "at": "@SusanWojcicki",
+            "url": "https://twitter.com/SusanWojcicki"
+          },
+          {
+            "name": "Jeff Bezos",
+            "at": "@JeffBezos",
+            "url": "https://twitter.com/JeffBezos"
+          }
+        ]
+      }
     }
   }
 }

@@ -1,16 +1,17 @@
 "use client";
 
+import { Locales } from "@/infraestructure/interfaces";
 import { FC, useState } from "react";
 import { IoIosRadio } from "react-icons/io";
 
 type Props = {
   className?: string;
-  // locale: Locales;
+  locale: Locales;
 };
 
 const Navitems = ["All", "Popular Tracks", "Tracks", "Playlists"];
 
-export const MiniNavSoundCloud: FC<Props> = ({ className }) => {
+export const MiniNavSoundCloud: FC<Props> = ({ className, locale }) => {
   const [clicked, setClicked] = useState("All");
   const [following, setFollowing] = useState(false);
 

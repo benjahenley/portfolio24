@@ -1,5 +1,4 @@
-// components/Waveform.tsx
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 interface WaveformProps {
@@ -11,32 +10,29 @@ const Waveform: React.FC<WaveformProps> = ({ audioFile }) => {
   const waveSurferRef = useRef<WaveSurfer | null>(null);
 
   useEffect(() => {
-    if (waveformRef.current) {
+    if (waveformRef.current && !waveSurferRef.current) {
       waveSurferRef.current = WaveSurfer.create({
         container: waveformRef.current,
-        // waveColor: "#ddd",
+        waveColor: "#ddd",
         progressColor: "#ff5500",
         cursorColor: "#ff5500",
         barWidth: 2,
         barRadius: 3,
-        // responsive: true,
         height: 65,
       });
-
-      waveSurferRef.current.load(audioFile);
-
-      return () => {
-        waveSurferRef.current?.destroy();
-      };
     }
+
+    if (waveSurferRef.current) {
+      waveSurferRef.current.load(audioFile);
+    }
+
+    return () => {
+      // waveSurferRef.current?.destroy();
+      // waveSurferRef.current = null;
+    };
   }, [audioFile]);
 
-  return (
-    <div>
-      <div ref={waveformRef}></div>
-      {/* <audio id="track" src={audioFile} controls></audio> */}
-    </div>
-  );
+  return <div ref={waveformRef}></div>;
 };
 
 export default Waveform;

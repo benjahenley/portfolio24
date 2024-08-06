@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { IoLanguage } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { contents } from "@/data/contents/content";
+import { useAtom } from "jotai";
+import { langOptions } from "@/atoms/lang";
 
 type Props = {
   sidebar?: boolean;
@@ -14,6 +16,7 @@ type Props = {
 
 export const LanguageButton: FC<Props> = ({ sidebar, locale }) => {
   const [dropdown, setDropdown] = useState(false);
+  const [lang, setLang] = useAtom(langOptions);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 

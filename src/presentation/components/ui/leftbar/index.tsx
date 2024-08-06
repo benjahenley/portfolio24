@@ -11,6 +11,7 @@ import TwitterSession from "../twitter-session";
 import { LanguageButton } from "../language-button/page";
 import { Locales } from "@/infraestructure/interfaces";
 import { contents } from "@/data/contents/content";
+import image from "../../../../../public/banners/white-bg.jpg";
 
 type Props = {
   locale: Locales;

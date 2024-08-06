@@ -2,10 +2,13 @@ import "./globals.css";
 import "photoswipe/style.css";
 
 import type { Metadata } from "next";
+import { Provider as JotaiProvider } from "jotai";
 import { Source_Sans_3 } from "@next/font/google";
-import { ThemeProvider } from "../../presentation/components/theme-providers/darkMode";
+import { ThemeProvider } from "../../presentation/components/providers/darkMode";
 import { Locales } from "@/infraestructure/interfaces";
 import { locales } from "@/middleware";
+import { AudioProvider } from "@/presentation/components/providers/audio";
+import img from "/banners/white-bg.jpg";
 
 const sourceSansPro = Source_Sans_3({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -33,16 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale}>
-      <ThemeProvider>
-        <body
-          className={
-            sourceSansPro.className +
-            " bg-white dark:bg-slate-800 h-full min-h-screen"
-          }>
-          <script src="https://unpkg.com/wavesurfer.js"></script>
-          <div className="h-full min-h-screen">{children}</div>
-        </body>
-      </ThemeProvider>
+      <body
+        className={`${sourceSansPro.className}  dark:bg-slate-800 h-full min-h-screen z`}>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <JotaiProvider>
+          <ThemeProvider>
+            <AudioProvider>
+              <div className="h-full min-h-screen">{children}</div>
+            </AudioProvider>
+          </ThemeProvider>
+        </JotaiProvider>
+      </body>
     </html>
   );
 }

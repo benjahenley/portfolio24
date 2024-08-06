@@ -22,66 +22,54 @@ import { IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
 import { DiPostgresql } from "react-icons/di";
 import { GrHeroku } from "react-icons/gr";
 import { BsBootstrapFill } from "react-icons/bs";
+import { contents } from "@/data/contents/content";
+import { Locales } from "@/infraestructure/interfaces";
 
 const ICONS = [
-  <FaReact />,
-  <FaCss3 />,
-  <FaHtml5 />,
-  <SiTypescript />,
-  <SiRedux />,
-  <RiNextjsFill />,
-  <IoLogoFirebase />,
-  <DiPostgresql />,
-  <GrHeroku />,
-  <IoLogoVercel />,
-  <FaGithub />,
-  <SiPostman />,
-  <SiStrapi />,
-  <RiTailwindCssFill />,
-  <SiAirtable />,
-  <FaAlgolia />,
-  <SiSass />,
-  <FaCcPaypal />,
-  <BsBootstrapFill />,
-  <SiReacthookform />,
-  <SiPrisma />,
-  <FaDocker />,
+  { icon: <FaReact />, key: "react" },
+  { icon: <FaCss3 />, key: "css3" },
+  { icon: <FaHtml5 />, key: "html5" },
+  { icon: <SiTypescript />, key: "typescript" },
+  { icon: <SiRedux />, key: "redux" },
+  { icon: <RiNextjsFill />, key: "nextjs" },
+  { icon: <IoLogoFirebase />, key: "firebase" },
+  { icon: <DiPostgresql />, key: "postgresql" },
+  { icon: <GrHeroku />, key: "heroku" },
+  { icon: <IoLogoVercel />, key: "vercel" },
+  { icon: <FaGithub />, key: "github" },
+  { icon: <SiPostman />, key: "postman" },
+  { icon: <SiStrapi />, key: "strapi" },
+  { icon: <RiTailwindCssFill />, key: "tailwind" },
+  { icon: <SiAirtable />, key: "airtable" },
+  { icon: <FaAlgolia />, key: "algolia" },
+  { icon: <SiSass />, key: "sass" },
+  { icon: <FaCcPaypal />, key: "paypal" },
+  { icon: <BsBootstrapFill />, key: "bootstrap" },
+  { icon: <SiReacthookform />, key: "reacthookform" },
+  { icon: <SiPrisma />, key: "prisma" },
+  { icon: <FaDocker />, key: "docker" },
 ];
 
-export function Skillset(props: any) {
+type Props = {
+  locale: Locales;
+  className: string;
+};
+
+export function Skillset({ locale, className }: Props) {
+  const { skillset } = contents[locale].pages.home;
   return (
-    <div className={props.className}>
-      <h2 className="text-2xl font-bold mb-4">My Skillset</h2>
-      <p className="text-base mb-4">
-        I am proficient in JavaScript and TypeScript, with a strong knowledge of
-        both SQL and NoSQL databases including Firebase Cloud Firestore,
-        Firebase Realtime Database, and PostgreSQL. I enjoy working on
-        React-based projects with Next.js and have experience deploying
-        applications on Heroku and Vercel. From initial layout and architecture
-        to a fully functional web app, I can handle the entire development
-        process. Additionally, I am bilingual, fluent in both English and
-        Spanish, which enhances my ability to collaborate in diverse teams.
-      </p>
-      <p className="text-base mb-4">
-        I have extensive experience with Postman, which has equipped me with the
-        skills to build robust backends with CRUD operations. Check out the
-        Projects tab to see my apps along with their respective documentation.
-        My expertise extends to setting up and maintaining RESTful APIs,
-        ensuring secure and efficient data exchange between the frontend and
-        backend.
-      </p>
-      <p className="text-base mb-4">
-        Moreover, I am adept at using powerful tools like Airtable and Algolia
-        to enhance the functionality and user experience of my applications. I
-        am also familiar with deploying applications on GitHub Pages, Vercel,
-        and Heroku. Unfortunately, Heroku's recent removal of free dynos has
-        left many of my applications without a host. Despite this, I have
-        continued to explore alternative hosting solutions to ensure the
-        accessibility and reliability of my projects.
-      </p>
+    <div className={className}>
+      <h2 className="text-2xl font-bold mb-4">{skillset.title}</h2>
+      {skillset.texts.map((text, key) => {
+        return (
+          <p className="text-base mb-4" key={key}>
+            {text}
+          </p>
+        );
+      })}
       <div className="flex flex-wrap justify-center w-full gap-8 pt-5">
-        {ICONS.map((icon, index) => (
-          <div key={index} className="text-3xl">
+        {ICONS.map(({ icon, key }) => (
+          <div key={key} className="text-3xl">
             {icon}
           </div>
         ))}
