@@ -1,19 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextRequest } from "next/server";
 import sgMail from "@sendgrid/mail";
-
-type Data = {
-  status: string;
-  message?: string;
-};
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  if (req.method === "POST") {
-    const { email, name, message } = req.body;
+export const POST = async (req: NextRequest) => {
+  try {
+    const body = await req.json();
+    const { email, name, message } = body;
 
     const msg = {
       to: "benjahenley@hotmail.com",
@@ -22,16 +15,14 @@ export default async function handler(
       text: message,
     };
 
-    try {
-      await sgMail.send(msg);
-      console.log("Email sent");
-      res.status(200).json({ status: "ok" });
-    } catch (error: any) {
-      console.error("Error sending email:", error.message);
-      res.status(500).json({ status: "error", message: error.message });
-    }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    await sgMail.send(msg);
+    console.log("Email sent");
+    return new Response(JSON.stringify({ status: "ok" }), { status: 200 });
+  } catch (error: any) {
+    console.error("Error sending email:", error.message);
+    return new Response(
+      JSON.stringify({ status: "error", message: error.message }),
+      { status: 500 }
+    );
   }
-}
+};

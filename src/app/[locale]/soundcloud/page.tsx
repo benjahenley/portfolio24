@@ -94,8 +94,8 @@ export default function SoundCloud({
 
         {/* TRACKS */}
         <div className=" w-full p-4 flex flex-col gap-5">
-          {TRACKS.map((track) => {
-            return <MusicCard {...track}></MusicCard>;
+          {TRACKS.map((track, key) => {
+            return <MusicCard key={key} {...track}></MusicCard>;
           })}
         </div>
       </div>

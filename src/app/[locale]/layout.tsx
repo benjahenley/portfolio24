@@ -8,7 +8,7 @@ import { ThemeProvider } from "../../presentation/components/providers/darkMode"
 import { Locales } from "@/infraestructure/interfaces";
 import { locales } from "@/middleware";
 import { AudioProvider } from "@/presentation/components/providers/audio";
-import img from "/banners/white-bg.jpg";
+import Script from "next/script";
 
 const sourceSansPro = Source_Sans_3({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang={locale}>
       <body
         className={`${sourceSansPro.className}  dark:bg-slate-800 h-full min-h-screen z`}>
-        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <Script src="https://unpkg.com/wavesurfer.js" strategy="lazyOnload" />
         <JotaiProvider>
           <ThemeProvider>
             <AudioProvider>
