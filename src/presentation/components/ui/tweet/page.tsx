@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ProfilePic from "../image/page";
 import InteractionItem from "./interactionItem";
 import INTERACTIONS from "../../../../infraestructure/data/interactions/page";
+import { Locales } from "@/infraestructure/interfaces";
 
 type Props = {
   className?: string;
@@ -13,6 +14,7 @@ type Props = {
   comments: number;
   reposts: number;
   saves: number;
+  locale: Locales;
 };
 
 function Tweet({
@@ -24,6 +26,7 @@ function Tweet({
   comments,
   reposts,
   saves,
+  locale,
 }: Props) {
   const counts: any = { likes, comments, reposts, saves };
 
@@ -35,7 +38,11 @@ function Tweet({
             <PinIcon className="w-2.5 h-2.5 text-gray-500" />
           </div>
         )}
-        {pinned && <p className="text-xs">Pinned Tweet</p>}
+        {pinned && (
+          <p className="text-xs">
+            {locale === "en" ? "Pinned Tweet" : "Tweet Fijado"}
+          </p>
+        )}
         <ProfilePic small />
         <div>
           <div className="flex items-center gap-2">
@@ -54,7 +61,6 @@ function Tweet({
                   icon={icon}
                   clicked={clicked}
                   text={text}
-                  keyName={key}
                   color={color}
                   colorText={colorText}
                   count={counts[key]}
@@ -69,7 +75,6 @@ function Tweet({
                     icon={icon}
                     clicked={clicked}
                     text={text}
-                    keyName={key}
                     color={color}
                     colorText={colorText}
                     count={counts[key]}

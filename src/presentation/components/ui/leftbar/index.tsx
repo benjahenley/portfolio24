@@ -1,51 +1,19 @@
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaSoundcloud,
-  FaGithub,
-} from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
 import { DarkModeToggle } from "@/presentation/components/ui/darkmode-btn/page";
 import Link from "next/link";
 import TwitterSession from "../twitter-session";
 import { LanguageButton } from "../language-button/page";
 import { Locales } from "@/infraestructure/interfaces";
-import { contents } from "@/data/contents/content";
-import image from "../../../../../public/banners/white-bg.jpg";
+
+import OPTIONS from "@/infraestructure/data/menu/page";
+import getOptions from "@/infraestructure/data/menu/page";
 
 type Props = {
   locale: Locales;
 };
 
 export function Leftbar({ locale }: Props) {
-  const { items } = contents[locale].ui.leftbar;
-  const OPTIONS = [
-    {
-      logo: <CgProfile />,
-      text: items[0],
-      href: "/",
-    },
-    {
-      logo: <FaLinkedin />,
-      text: items[1],
-      href: "https://www.linkedin.com/in/benjamin-h-579b88146/",
-    },
-    {
-      logo: <FaGithub />,
-      text: items[2],
-      href: "https://github.com/benjahenley",
-    },
-    {
-      logo: <FaInstagram />,
-      text: items[3],
-      href: "https://www.instagram.com/benjahenley/",
-    },
-    {
-      logo: <FaSoundcloud />,
-      text: items[4],
-      href: "/soundcloud",
-    },
-  ];
+  const OPTIONS = getOptions(locale);
+
   return (
     <>
       <div
@@ -73,7 +41,7 @@ export function Leftbar({ locale }: Props) {
                       <div className="transition-transform transform group-hover:scale-105 text-2xl md:text-3xl lg:text-4xl">
                         {logo}
                       </div>
-                      <p className="text-lg transition-transform uppercase transform group-hover:scale-110 md:hidden xl:block">
+                      <p className="text-lg transition-transform uppercase transform md:hidden xl:block">
                         {text}
                       </p>
                     </div>

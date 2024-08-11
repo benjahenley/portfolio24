@@ -8,7 +8,7 @@ export const DarkModeToggle = () => {
   return (
     <div
       onClick={toggleTheme}
-      className={`relative w-8 h-4 cursor-pointer rounded-full bg-gray-300 dark:bg-gray-600 transition-colors duration-300 md:w-10 md:h-5 lg:w-12 lg:h-6 xl:w-14 xl:h-7`}>
+      className={`relative w-8 h-4 scale-125 cursor-pointer rounded-full bg-gray-300 dark:bg-gray-600 transition-colors duration-300 md:scale-100 md:w-10 md:h-5 lg:w-12 lg:h-6 xl:w-14 xl:h-7`}>
       <div
         className={`absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-white shadow-md transform transition-transform duration-300 ${
           theme === "light"

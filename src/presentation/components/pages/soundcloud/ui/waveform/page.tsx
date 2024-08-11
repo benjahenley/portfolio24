@@ -27,8 +27,8 @@ const Waveform: React.FC<WaveformProps> = ({ audioFile }) => {
     }
 
     return () => {
-      // waveSurferRef.current?.destroy();
-      // waveSurferRef.current = null;
+      waveSurferRef.current?.destroy();
+      waveSurferRef.current = null;
     };
   }, [audioFile]);
 

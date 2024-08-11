@@ -1,24 +1,23 @@
 "use client";
 
-import { Desk } from "@/presentation/components/ui/desk";
-import { About } from "@/presentation/components/pages/home/about";
+import NavbarMobile from "@/presentation/components/ui/navbar-mobile/page";
+import ProfilePic from "../../presentation/components/ui/image/page";
+import { CakeIcon, CalendarIcon, LinksIcon } from "../../../public/svgs";
 import { FollowButtonHome } from "@/presentation/components/ui/follow-button/page";
+import { OptionsMenu } from "@/presentation/components/ui/options-menu/page";
+import { feedOptions } from "@/atoms/feed";
+import { MdVerified } from "react-icons/md";
+import { RightBar } from "@/presentation/components/ui/rightbar/page";
 import { Projects } from "@/presentation/components/pages/home/projects";
 import { Skillset } from "@/presentation/components/pages/home/skillset";
-import { CakeIcon, CalendarIcon, LinksIcon } from "../../../public/svgs";
-import { useState } from "react";
-import { Feed } from "@/presentation/components/pages/home/feed";
-import ProfilePic from "../../presentation/components/ui/image/page";
-import { Leftbar } from "@/presentation/components/ui/leftbar";
-import { Footer } from "@/presentation/components/ui/footer";
-import { RightBar } from "@/presentation/components/ui/rightbar";
-import { Locales } from "@/infraestructure/interfaces";
-import { NavbarMobile } from "@/presentation/components/ui/navbar-mobile/page";
-import { MdVerified } from "react-icons/md";
 import { contents } from "@/data/contents/content";
-import { OptionsMenu } from "@/presentation/components/ui/options-menu/page";
+import { Locales } from "@/infraestructure/interfaces";
+import { Leftbar } from "@/presentation/components/ui/leftbar";
 import { useAtom } from "jotai";
-import { feedOptions } from "@/atoms/feed";
+import { Footer } from "@/presentation/components/ui/footer";
+import { About } from "@/presentation/components/pages/home/about";
+import { Desk } from "@/presentation/components/ui/desk";
+import { Feed } from "@/presentation/components/pages/home/feed";
 
 export default function Home({
   params: { locale },
@@ -77,7 +76,9 @@ export default function Home({
                 </div>
                 <div className="flex items-center gap-1">
                   <CalendarIcon className="w-5 h-5" />
-                  <p className="text-sm">Joined 05/2021</p>
+                  <p className="text-sm">
+                    {locale === "es" ? "Inicio" : "Joined"} 05/2021
+                  </p>
                 </div>
               </div>
             </div>

@@ -15,6 +15,7 @@ export function Projects({ locale, className }: Props) {
         {TWEETS.map(
           ({ date, content, likes, comments, reposts, saves }, key) => (
             <Tweet
+              locale={locale}
               date={date}
               key={key}
               likes={likes}

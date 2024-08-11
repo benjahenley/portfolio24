@@ -1,7 +1,10 @@
-import { sendMail } from "@/lib/sendgrid";
-import { DisplayArrowIcon } from "../../../../../public/svgs";
-import { PrimaryButton } from "@/presentation/components/ui/button";
+"use client";
+
+import { useState } from "react";
+import { atom, useAtom } from "jotai";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PrimaryButton } from "@/presentation/components/ui/button";
+import { DisplayArrowIcon } from "../../../../../public/svgs";
 
 type Inputs = {
   name: string;
@@ -13,19 +16,45 @@ type Props = {
   className?: string;
 };
 
+const emailCountAtom = atom(0);
+
 export function Form({ className }: Props) {
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [emailCount, setEmailCount] = useAtom(emailCountAtom);
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    if (emailCount >= 4) {
+      setErrorMessage("You have reached the limit of 4 emails.");
+      return;
+    }
+    try {
+      const response = await fetch("/api/mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const { name, email, message } = data;
-    // sendMail({ name, email, message });
+      const result = await response.json();
+
+      if (response.ok) {
+        setSuccessMessage("Message sent successfully!");
+        setEmailCount(emailCount + 1);
+        reset();
+      } else {
+        setErrorMessage(result.message || "Failed to send message.");
+      }
+    } catch (error) {
+      setErrorMessage("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -56,7 +85,7 @@ export function Form({ className }: Props) {
           {errors.name?.type === "required" && (
             <p role="alert">First name is required</p>
           )}
-          {errors.name?.ref && <p role="alert">Message errror</p>}
+          {errors.name?.ref && <p role="alert">Message error</p>}
         </div>
         <div className="flex flex-col gap-1 mt-2">
           <label htmlFor="email">
@@ -86,6 +115,8 @@ export function Form({ className }: Props) {
           {errors.message && <p role="alert">{errors.message.message}</p>}
         </div>
         <div className="mt-4">
+          {successMessage && <p className="text-green-500">{successMessage}</p>}
+          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
           <PrimaryButton type="submit">Send</PrimaryButton>
         </div>
       </form>

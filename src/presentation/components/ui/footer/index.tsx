@@ -18,7 +18,7 @@ export function Footer({ className }: any) {
             <InstagramIcon className="w-5" />
           </a>
           <a
-            href="https://github.com/benjini123"
+            href="https://github.com/benjahenley"
             className="w-10 h-10 grid place-items-center hover:bg-gray-200 rounded"
             target="_blank"
             rel="noopener noreferrer">

@@ -2,21 +2,28 @@
 
 import { useState } from "react";
 
+type Props = {
+  icon: React.ReactNode;
+  clicked: React.ReactNode;
+  text: string;
+  color: string;
+  colorText: string;
+  count: any;
+};
+
 function InteractionItem({
   icon,
   clicked,
   text,
-  key,
   color,
   colorText,
   count,
-}: any) {
+}: Props) {
   const [interacted, setInteracted] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   return (
     <li
-      key={key}
       className={`flex items-center gap-1 cursor-pointer`}
       onClick={() => setInteracted(!interacted)}>
       <p

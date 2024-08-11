@@ -77,12 +77,12 @@
     },
     "leftbar": {
       "items": [
-        "Perfil",
-        "LinkedIn",
-        "Github",
-        "Instagram",
-        "Musica",
-        "Idioma"
+        "PERFIL",
+        "LINKEDIN",
+        "GITHUB",
+        "INSTAGRAM",
+        "MUSICA",
+        "IDIOMA"
       ],
       "languages": {
         "en": "Inglés (UK)",

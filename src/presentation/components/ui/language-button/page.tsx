@@ -16,7 +16,6 @@ type Props = {
 
 export const LanguageButton: FC<Props> = ({ sidebar, locale }) => {
   const [dropdown, setDropdown] = useState(false);
-  const [lang, setLang] = useAtom(langOptions);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
@@ -63,7 +62,7 @@ export const LanguageButton: FC<Props> = ({ sidebar, locale }) => {
           <div className="text-xl md:text-2xl lg:text-4xl transition-transform transform group-hover:scale-110">
             <IoLanguage />
           </div>
-          <p className="uppercase text-lg md:hidden xl:block transition-transform transform group-hover:scale-110">
+          <p className="uppercase text-md md:hidden xl:block xl:text-lg transition-transform transform ">
             {contents[locale].ui.leftbar.items[5]}
           </p>
         </div>
@@ -80,7 +79,7 @@ export const LanguageButton: FC<Props> = ({ sidebar, locale }) => {
                 <button
                   className="w-full"
                   onClick={() => changeLanguage(code as Locales)}>
-                  <div className="px-5 py-1 w-full dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer flex flex-row justify-start md:justify-center xl:justify-start items-center gap-4 ">
+                  <div className="px-3 lg:px-5 py-1 w-full dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer flex flex-row justify-start md:justify-center xl:justify-start items-center gap-4 ">
                     <div className="text-lg lg:text-xl xl:text-2xl">{flag}</div>
                     <p className="md:hidden xl:block">{name}</p>
                   </div>

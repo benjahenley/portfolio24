@@ -7,8 +7,8 @@ export async function sendMail(data: any) {
 
   try {
     const sendMailData = await sendMail.json();
-    console.log(sendMailData);
+    return sendMailData;
   } catch (err: any) {
-    throw err.message;
+    return new Error(err.message);
   }
 }
