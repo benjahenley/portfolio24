@@ -22,7 +22,7 @@ export default function SoundCloudLayout({
         <aside className="relative hidden p-2 pl-5 lg:block lg:w-[30%] xl:w-1/5 bg-white dark:bg-[#1f2937]">
           <div
             style={{ width: "inherit" }}
-            className="lg:max-w-[280px] overflow-hidden xl:max-w-[230px] 2xl:max-w-[280px] fixed dark:text-white top-2 pt-4">
+            className="lg:max-w-[300px] overflow-auto scrollbar-hide xl:max-w-[280px] 2xl:max-w-[280px] fixed dark:text-white top-2 pt-4">
             <RightBarSC locale={locale}></RightBarSC>
           </div>
         </aside>

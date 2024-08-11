@@ -14,7 +14,7 @@ export function RightBar({ locale }: Props) {
     <>
       <div
         style={{ width: "inherit" }}
-        className="lg:max-w-[280px] overflow-hidden xl:max-w-[230px] 2xl:max-w-[280px] fixed dark:text-white  flex flex-col gap-5">
+        className=" h-[100%] xl:max-w-[230px] 2xl:max-w-[280px] fixed dark:text-white  flex flex-col gap-5">
         <div className="border border-gray-300 dark:border-slate-600 rounded-xl top-2 pt-4 ">
           <div className="dark:text-white font-bold w-full text-xl px-4 border-b border-gray-300 dark:border-slate-600 pb-4">
             {trends.title}
@@ -46,7 +46,7 @@ export function RightBar({ locale }: Props) {
             <p>{trends.more}</p>
           </div>
         </div>
-        <div className="border border-gray-300 dark:border-slate-600 rounded-xl top-2 pt-4">
+        <div className="border hidden lg:initial border-gray-300 dark:border-slate-600 rounded-xl top-2 pt-4">
           <div className="dark:text-white font-bold w-full text-xl px-4 border-b border-gray-300 dark:border-slate-600 pb-4">
             {people.title}
           </div>

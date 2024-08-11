@@ -1,11 +1,18 @@
-import React, { useCallback, useEffect, useRef } from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 interface WaveformProps {
   audioFile: string;
+  isPlaying: boolean;
+  onTogglePlay: () => void;
 }
 
-const Waveform: React.FC<WaveformProps> = ({ audioFile }) => {
+const Waveform: React.FC<WaveformProps> = ({
+  audioFile,
+  isPlaying,
+  onTogglePlay,
+}) => {
   const waveformRef = useRef<HTMLDivElement | null>(null);
   const waveSurferRef = useRef<WaveSurfer | null>(null);
 
@@ -20,6 +27,9 @@ const Waveform: React.FC<WaveformProps> = ({ audioFile }) => {
         barRadius: 3,
         height: 65,
       });
+      waveSurferRef.current.on("finish", () => {
+        onTogglePlay();
+      });
     }
 
     if (waveSurferRef.current) {
@@ -32,7 +42,15 @@ const Waveform: React.FC<WaveformProps> = ({ audioFile }) => {
     };
   }, [audioFile]);
 
-  return <div ref={waveformRef}></div>;
+  useEffect(() => {
+    if (isPlaying) {
+      waveSurferRef.current?.play();
+    } else {
+      waveSurferRef.current?.pause();
+    }
+  }, [isPlaying]);
+
+  return <div ref={waveformRef} onClick={onTogglePlay}></div>;
 };
 
 export default Waveform;

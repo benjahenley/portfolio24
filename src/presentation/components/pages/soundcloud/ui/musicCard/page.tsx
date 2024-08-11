@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { FaPlay } from "react-icons/fa6";
+import { FaPlay, FaPause } from "react-icons/fa6";
 import Waveform from "../waveform/page";
 import { useAudio } from "@/presentation/components/providers/audio";
 
@@ -22,10 +22,15 @@ export const MusicCard: FC<Props> = ({
   date,
   hashtag,
 }) => {
-  const { setCurrentAudio } = useAudio();
+  const { currentAudio, isPlaying, playAudio, pauseAudio } = useAudio();
+  const isCurrentTrackPlaying = currentAudio === audioFile && isPlaying;
 
   const handleClick = () => {
-    setCurrentAudio(audioFile);
+    if (isCurrentTrackPlaying) {
+      pauseAudio();
+    } else {
+      playAudio(audioFile);
+    }
   };
 
   return (
@@ -45,7 +50,11 @@ export const MusicCard: FC<Props> = ({
                 className="bg-orange-500 p-3 rounded-full"
                 onClick={handleClick}>
                 <span className="text-md text-white">
-                  <FaPlay className="pl-1"></FaPlay>
+                  {isCurrentTrackPlaying ? (
+                    <FaPause className="pl-1" />
+                  ) : (
+                    <FaPlay className="pl-1" />
+                  )}
                 </span>
               </button>
               <div className="flex flex-col">
@@ -67,7 +76,11 @@ export const MusicCard: FC<Props> = ({
             </div>
           </div>
           <div className="mt-2">
-            <Waveform audioFile={audioFile} />
+            <Waveform
+              audioFile={audioFile}
+              isPlaying={isCurrentTrackPlaying}
+              onTogglePlay={handleClick}
+            />
           </div>
         </div>
       </div>

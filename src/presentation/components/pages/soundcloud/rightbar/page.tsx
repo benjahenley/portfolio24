@@ -10,9 +10,10 @@ type Props = {
 
 export const RightBarSC: FC<Props> = ({ className, locale }) => {
   const { texts } = contents[locale].ui.soundcloud.rightbar;
+
   return (
     <div className={className}>
-      <div className="px-4 lg:px-1">
+      <div className="px-4 lg:px-1 max-h-screen">
         <FollowCountSC></FollowCountSC>
         <div className="flex flex-col items-start mb-2">
           {texts.map((text, key) => {

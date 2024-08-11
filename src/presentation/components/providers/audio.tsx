@@ -1,39 +1,48 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, useRef } from "react";
-import WaveSurfer from "wavesurfer.js";
+import { createContext, useContext, useState, useEffect, FC } from "react";
 
 type AudioContextType = {
   currentAudio: string | null;
-  setCurrentAudio: (audio: string) => void;
-  waveSurferRef: React.MutableRefObject<WaveSurfer | null>;
+  isPlaying: boolean;
+  playAudio: (audioFile: string) => void;
+  pauseAudio: () => void;
 };
 
 const AudioContext = createContext<AudioContextType | undefined>(undefined);
 
-export const AudioProvider = ({ children }: { children: React.ReactNode }) => {
-  const [currentAudio, setCurrentAudio] = useState<string | null>(null);
-  const waveSurferRef = useRef<WaveSurfer | null>(null);
-
-  useEffect(() => {
-    if (waveSurferRef.current) {
-      waveSurferRef.current.load(currentAudio || "");
-    }
-  }, [currentAudio]);
-
-  return (
-    <AudioContext.Provider
-      value={{ currentAudio, setCurrentAudio, waveSurferRef }}>
-      {children}
-    </AudioContext.Provider>
-  );
-};
-
 export const useAudio = () => {
   const context = useContext(AudioContext);
-
   if (!context) {
     throw new Error("useAudio must be used within an AudioProvider");
   }
   return context;
+};
+
+type Props = {
+  children: any;
+};
+
+export const AudioProvider = ({ children }: Props) => {
+  const [currentAudio, setCurrentAudio] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playAudio = (audioFile: string) => {
+    if (currentAudio && currentAudio !== audioFile) {
+      setIsPlaying(false);
+    }
+    setCurrentAudio(audioFile);
+    setIsPlaying(true);
+  };
+
+  const pauseAudio = () => {
+    setIsPlaying(false);
+  };
+
+  return (
+    <AudioContext.Provider
+      value={{ currentAudio, isPlaying, playAudio, pauseAudio }}>
+      {children}
+    </AudioContext.Provider>
+  );
 };

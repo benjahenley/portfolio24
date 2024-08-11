@@ -99,7 +99,7 @@ export default function SoundCloud({
           })}
         </div>
       </div>
-      <AudioPlayer></AudioPlayer>
+      {/* <AudioPlayer></AudioPlayer> */}
     </header>
   );
 }
